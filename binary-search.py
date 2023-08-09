@@ -1,14 +1,17 @@
-        
-# binary search
+# binary search - O(log n)
 
 def binary_search(elements, value):
     low = 0
     high = len(elements)-1
 
+    # loop through list
     while low <= high:
+        # find middle point
         mid = (low + high)
+        # Return middle value if it matches input value
         if elements[mid] == value:
             return mid
+        # Check whether middle value is higher or lower than input value
         if elements[mid] > value:
             high = mid - 1
         else:
